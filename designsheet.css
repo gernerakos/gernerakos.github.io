@@ -1,0 +1,164 @@
+
+body {   					/* általános formázás minden html oldalra */
+	margin: 25px;								/* margó, betűk típusa, mérete és színének beállítása */
+	background-color: #0f0f0f;
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	background-image: url("pictures/bg.jpg");   /* háttérkép*/
+	}
+
+
+
+h1 {
+	
+	background-color: #b92d2d;					/* a címsorok beállítása minden oldalon*/
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #ddd744;
+	}
+	
+table{
+	border: solid;
+	
+    /*margin: 10px;*/
+    padding: 10px;
+    background-color: #3f3f3f;
+}
+
+
+/* ----------------- ID ----------------- */ 
+#main_table{
+	width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	
+}
+
+#menu{
+	padding: 10px;
+	line-height: 2;
+	vertical-align: top;
+	Height: 250px;
+	width: 210px;
+	border: solid;
+}
+
+#right_menu{
+	width: 200px;
+}
+
+
+#dynamic_content{
+	vertical-align: top;
+	width: 800px;
+}
+
+#database_result{
+	width: 800px;
+	height: fit-content;
+	line-height: 25px;
+	padding: 10px;
+}
+
+#general_button{
+	background-color: #ddd744;
+}
+
+#reset_button{
+	background-color: #b92d2d;
+}
+
+#login_redirect{
+	color: #ddd744;
+}
+
+#session_box{
+	background-color: #b92d2d;
+	color: #ddd744;
+	vertical-align: top;
+	padding: 10px;
+	padding-top: 10px;
+	line-height: 1.5;
+}
+
+
+
+
+
+
+.database_result_row:hover {
+	border: solid;
+	border-color: #ddd744;
+	border-width: 1px;
+
+	color: #303030;
+	background-color: #e4d49e;
+	
+	
+}
+
+.sidenav a:any-link{
+	background-color: #3f3f3f;
+	color: #ffffff;
+}
+
+.sidenav a:visited {
+  background-color: #3f3f3f;
+  color: #ffffff;
+}
+
+.sidenav a.active {
+  background-color: #3f3f3f;
+  color: #b92d2d;
+}
+
+.sidenav a:hover {
+  background-color: #3f3f3f;
+  color: #ddd744;
+}
+
+.spread_out{
+	line-height: 2;
+	vertical-align: top;
+}
+
+.errormsg{
+	color: #ddd744;
+	background-color: #b92d2d;
+	line-height: 1.5;
+	width: 398px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
