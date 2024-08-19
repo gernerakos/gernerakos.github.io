@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FOK-GYEM kapcsolási rajzok</title>
+	<meta name="FOK-GYEM kapcsolási rajzok" content="FOK-GYEM kapcsolási rajzok" />
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="designsheet.css" />
+	
+</head>
+<body>
+	<h1>
+		<img src="pictures/FGY-doksi_small.png" alt="FOK-GYEM dokumentációk" class="center">
+	</h1>
+
+	<hr style="paddig-bottom: 10px">
+
+	<table id = "main_table" align="center" >
+		<tr>
+			<td id="menu">
+				<div class = "sidenav">
+					<b>
+						<h2 align="center"> Menü</h2>
+						<hr>
+						<h2>
+							<li>
+								<a href="index.html"> 
+								Főoldal 
+								</a>
+							</li>
+							<br>
+							<li>
+								<a href="schematics.html"> 
+								Kapcsolási rajzok 
+								</a>
+							</li>
+							<li>
+								<a href="https://hu.wikipedia.org/wiki/FOK-GYEM_kijelzők_protokollja_és_működése"> 
+								Protokoll leírás 
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/gernerakos/FOK-GYEM-driver/tree/main"> 
+								Mintaprogram
+								</a>
+							</li>
+							<br>
+						</h2>
+						<hr>
+						<p align  = "center">
+							Kapcsolat: <br> Discord: Gernerakos235
+							<br>
+							Github: 						
+								<a href="https://github.com/gernerakos"> 
+								github.com/gernerakos
+								</a>
+							<hr>
+						</p>
+						<p align  = "center">
+							A weblap teljes tartalma a CreativeCommons BY-NC-SA 4.0 Licensz alá tartozik.
+							<br>
+						</p>
+						<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> 
+							<img src="pictures/by-nc-sa.png" alt="CreativeCommons BY-NC-SA 4.0" class="center">
+						</a>
+						<p align  = "center">
+							This site is hosted on GitHub Pages
+							<br>
+						</p>
+					</b>
+				</div>
+			</td>
+			<td> 
+				<div class="spread_out">
+					<h2 align="center" style="margin-top: 40px"> Ki-CAD projektfájlok használata </h2>
+					<p style="margin-left: 20px"> A visszafejtett kapcsolási rajzok elérhetőek a Ki-CAD 8.0 ingyenes kapcsolási rajz - és NYÁK tervező által használt formátumokban.</p>
+					<a style="margin-left: 20px" href="https://www.kicad.org/download/" > Ki-CAD 8.0 letöltés </a>
+				<p style="margin-left: 20px"> Hogy az oldalról letöltött rajzok megfelelően nyíljanak meg, a következő opciókból választhatunk:
+					<li style="margin-left: 40px">A letöltött .zip file először kicsomagoljuk, majd a mappában található .pro kiteresztésű projektfile-t nyitjuk meg a Ki-CAD-al.</li>
+					<li style="margin-left: 40px">A letöltött .zip file-ból a .sch kiteresztésű kapcsolási rajzot nyitjuk meg a Ki-CAD schematic editorral. Ez esetben a kapcsolási rajz csak read-only lesz.</li>
+					<li style="margin-left: 40px">A Ki-CAD-ot megnyitva, a file -> unarchive projekktel kiválasztjuk a letöltött zip-et, majd a cél mappát, ahova ki szeretnénk csomagolni. <br>Eztuán a kapcsolási rajz elérhető a "schematic editor"-ra kattintva. </li>
+					<li style="margin-left: 40px"> Ha mindez túl bonyolult, akkor minden rajz elérhető .png-ként is.</li>
+				</p>
+				<h2 align="center" style="margin-top: 40px"> Pixel mátrixok</h2>
+					<table id = "general_table" align="center" border = "solid" width = "95%">
+							<tr>
+								<td height="20" td colspan="3"> <h3 id="table_header" align="center">16x16 Multiplexer kártyás (kiírókártyás)</h3></td>
+							</tr>
+							<tr>
+								<td>A legelterjedtebb FOK-GYEM pixel mátrix modul, 16x16 felbontással. A modul aktív áramköri elemet nem tartalmaz, vezérlését a multiplexer kártya, és a sorvezérlő panel látja el.</td>
+								<td>FOK-GYEM gyári szám:</td>
+								<td>Nem elérhető</td>
+
+							</tr>
+							<tr>
+								<td>
+									<div class="row">
+										<div class="column">
+											<img src="data/Images/pxm_16x16_muxcard_front.jpg" alt="16x16 front" class="small_image" style="width:100%">
+										</div>
+										<div class="column">
+											<img src="data/Images/pxm_16x16_muxcard_rear.jpg" alt="16x16 rear" class="small_image" style="width:100%">
+										</div>
+								</td>
+								<td>
+									<p align="center">Ki-CAD 8.0 projekt</p><br>
+									<a href="data\projects\pxm_16x16_muxcard\FGY_pxm_16x16_muxcard.zip"> 
+										<img class="center" src="pictures/Kicad_logo.jpg" width='64'>
+									</a>
+								</td>
+								<td>Kapcsolási rajz (PNG)</td>
+							</tr>
+						<tr height="20" td colspan="3"></td></tr>
+							<tr>
+								<td colspan="3"><h3 id="table_header" align="center">16x16 beépített meghajtó IC-s</h3></td>
+							</tr>
+							<tr>
+								<td>A modernebb kivitelű pixel mátrixok működéséhez már nem volt szükség multiplexer kártyára (kiírókártyára), mert beépített oszlopmeghajtó IC-ket tartalmaztak, melyek egyeb vannak építve 8 bites shift-regiszterrel is, így a pixel modulok meghajtása nagymértékben egyszerűsödött. </td>
+								<td>FOK-GYEM gyári szám:</td>
+								<td>FGY 4.2002</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="row">
+										<div class="column">
+											<img src="data/Images/pxm_16x16_embedded_drivers_front.jpg" alt="16x16 front" class="small_image" style="width:100%">
+										</div>
+										<div class="column">
+											<img src="data/Images/pxm_16x16_embedded_drivers_rear.jpg" alt="16x16 rear" class="small_image" style="width:100%">
+										</div>
+									</div>
+
+								</td>
+								<td>
+									<p align="center">Ki-CAD 8.0 projekt</p><br>
+									<a href="data\projects\pxm_16x16_embedded_drivers\FGY_pxm_16x16_embedded_drivers.zip"> 
+										<img class="center" src="pictures/Kicad_logo.jpg" width='64'>
+									</a>
+								</td>
+								<td>Kapcsolási rajz (PNG)
+									<div class="column">
+											<img src="data/projects/pxm_16x16_embedded_drivers/FOK-GYEM_pxm_16x16_embedded_drivers.png" alt="16x16 rear" class="small_image" style="width:100%">
+									</div>
+								</td>
+							</tr>
+						<tr height="20"td colspan="3"></td></tr>
+							<tr>
+								<td colspan="3"><h3 id="table_header" align="center">14x28 számtábla</h3></td>
+							</tr>
+							<tr>
+								<td>Ez a számtáblákban elterjedt méret gyakorlatilag olyan, mintha két darab 16x16-os, multiplexer kártyás modul lenne egymás mellé téve, csak a határoló pixel oszlopok (2-2 jobb és bal oldalt) illetve alul és fölül 1-1 sor el van hagyva.</td>
+								<td>FOK-GYEM gyári szám:</td>
+								<td>Nem elérhető</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="column">
+										<img src="data/Images/pxm_14x28_muxcard_front.jpg" alt="14x24 front" class="small_image" style="width:100%">
+										(jobb képet nem találtam)
+									</div>
+								</td>
+								<td>
+									<p align="center">Ki-CAD 8.0 projekt</p><br>
+									<a href="data\projects\pxm_14x28_muxcard\FGY_pxm_14x28_muxcard.zip"> 
+										<img class="center" src="pictures/Kicad_logo.jpg" width='64'>
+									</a>
+								</td>
+								<td>Kapcsolási rajz (PNG)
+									<div class="column">
+											<img src="data/projects/pxm_14x28_muxcard\FGY_pxm_14x28_muxcard.png" alt="16x16 rear" class="small_image" style="width:100%">
+									</div>
+								</td>
+							</tr>
+					</table>
+					
+					<h2 align="center" style="margin-top: 40px">Kijelző vezérlőkártyák</h2>
+					
+					<table align="center" border = "relief" style="margin-left: 30px; margin-right: 30px" width = "95%">
+							<tr>
+								<td colspan="3"> <h3 id="table_header" align="center">Klasszik vezérlőpanel</h3></td>
+							</tr>
+							<tr>
+								<td>A régebbi kivitelű FOK-GYEM kijelzőkben megtalálható vezérlő panel. Ezen kapott helyet az egész kijelző agya, a 80C32 típusú, 8 bites processzor, illetve a működéséhez elegedhetetlen EPROM-ok és egyéb kiegésítő digitális áramkörök. Ebben a verzióban még külön EPROM volt megtalálható a processzorban futó program, illetve a képteszt során használt képek tárolására.  </td>
+								<td>FOK-GYEM gyári szám:</td>
+								<td>1.4065</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="row">
+										<div class="column">
+											<img src="data/Images/FGY_main_pcb_1.4065_c.jpg" 
+											alt="FGY main pcb 1.4065" class="small_image" style="width:100%">
+										</div>
+										<div class="column">
+											<img src="data/Images/FGY_main_pcb_1.4065_s.jpg" 
+											alt="FGY main pcb 1.4065" class="small_image" style="width:100%">
+										</div>
+									</div>
+								</td>
+								<td>
+									<p align="center">Ki-CAD 8.0 projekt</p><br>
+											visszafejtés folyamatban
+								</td>
+								<td>Kapcsolási rajz (PNG)
+									<div class="column">
+											visszafejtés folyamatban
+									</div>
+								</td>
+							</tr>
+						<tr height="20"<td colspan="3"></td></tr>
+							<tr>
+								<td colspan="3"><h3 id="table_header" align="center">Sorvezérlő panel</h3></td>
+							</tr>
+							<tr>
+								<td>A régebbi kivitelű kijelzőkben található a vezérlő panel után. Feladata a kijelző sorainak meghajtása, illetve a kiírókártyák (multiplexer kártyák) vezérlése. A rajta található jumperekkel a kijelző kép invertálható, illetve, ezeknek a kártyáknak is van jumperekkel beállítható címe.</td>
+								<td>FOK-GYEM gyári szám:</td>
+								<td>1.4070</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="row">
+										<div class="column">
+											<img src="data/Images/FGY_sub_pcb_1.4070_c.jpg" 
+											alt="FGY main pcb 1.4065" class="small_image" style="width:100%">
+										</div>
+										<div class="column">
+											<img src="data/Images/FGY_sub_pcb_1.4070_s.jpg" 
+											alt="FGY main pcb 1.4065" class="small_image" style="width:100%">
+										</div>
+									</div>
+								</td>
+								<td>
+									<p align="center">Ki-CAD 8.0 projekt</p><br>
+									<a href="data\projects\FGY-1.4070_sub_pcb\FGY-1.4070_sub_pcb.zip"> 
+										<img class="center" src="pictures/Kicad_logo.jpg" width='64'>
+									</a>
+								</td>
+								<td>Kapcsolási rajz (PNG)
+									<div class="column">
+											<img src="data/projects/FGY-1.4070_sub_pcb/FGY_1.4070_sub_pcb.png" alt="16x16 rear" class="small_image" style="width:100%">
+									</div>
+								</td>
+							</tr>
+						<tr height="20"<td colspan="3"></td></tr>
+							<tr>
+									<td colspan="3"><h3 id="table_header" align="center">Multiplexer kártya (kiírókártya)</h3></td>
+								</tr>
+							<tr>
+								<td>A régebbi kivitelű kijelzőkben található, a pixel mátrixok hátulján. Létezett SMD kivitelű Krueger gyártmányú is, de a kapcsolási rajzuk megegyezik. Ezen található az oszlopok meghajtásáért felelős áramkörök, illetve a DIP kapcsolókkal beállítható a modul címe</td>
+								<td>FOK-GYEM gyári szám:</td>
+								<td>1.4050</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="row">
+										<div class="column">
+											<img src="data/Images/FGY_mux_pcb_1.4050_c.jpg" 
+											alt="FGY mux pcb 1.4050" class="small_image" style="width:100%">
+										</div>
+										<div class="column">
+											<img src="data/Images/FGY_mux_pcb_1.4050_s.jpg" 
+											alt="FGY mux pcb 1.4050" class="small_image" style="width:100%">
+										</div>
+									</div>
+								</td>
+								<td>
+									<p align="center">Ki-CAD 8.0 projekt</p><br>
+									<a href="data\projects\FGY-1.4050_mux_pcb\FGY-1.4050_mux_pcb.zip"> 
+										<img class="center" src="pictures/Kicad_logo.jpg" width='64'>
+									</a>
+								</td>
+								<td>Kapcsolási rajz (PNG)
+									<div class="column">
+											<img src="data/projects/FGY-1.4050_mux_pcb/FGY-1.4050_mux_pcb.png" alt="mux pcb" class="small_image" style="width:100%">
+									</div>
+								</td>
+							</tr>
+						<tr height="20"<td colspan="3"></td></tr>
+							<tr>
+								<td colspan="3"><h3 id="table_header" align="center">14x28 számtábla vezérlőkártya</h3></td>
+							</tr>
+							<tr>
+								<td>Elsősorban a buszok hátsó kijelzőjét vezérelte, 14x28 vagy 16x32 felbontásban. Érdekessége, hogy nincs benne külön EPROM, hanema processzorban (87c51) van tárolva a program is. Másik érdekessége, hogy kiírókártyás pixel mátrixokhoz tervezték, viszont sorvezérlő kártya nem kell hozzá, mert a sorvezérlést ezen a panelen oldották meg.</td>
+								<td>FOK-GYEM gyári szám:</td>
+								<td>1.0303</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="row">
+										<div class="column">
+											<img src="data/Images/FGY_main_pcb_1.0303_c.jpg" 
+											alt="FGY mux pcb 1.4050" class="small_image" style="width:100%">
+										</div>
+										<div class="column">
+											<img src="data/Images/FGY_main_pcb_1.0303_s.jpg" 
+											alt="FGY mux pcb 1.4050" class="small_image" style="width:100%">
+										</div>
+									</div>
+								</td>
+								<td>
+									<p align="center">Ki-CAD 8.0 projekt</p><br>
+									<a href="data\projects\FGY-1.0303_main_pcb\FGY-1.0303_main_pcb.zip"> 
+										<img class="center" src="pictures/Kicad_logo.jpg" width='64'>
+									</a>
+								</td>
+								<td>Kapcsolási rajz (PNG)
+									<div class="column">
+											<img src="data/projects/FGY-1.0303_main_pcb/FGY-1.0303_main_pcb.png" alt="mux pcb" class="small_image" style="width:100%">
+									</div>
+								</td>
+							</tr>
+						<tr height="20"<td colspan="3"></td></tr>
+							<tr>
+								<td colspan="3"><h3 id="table_header" align="center">"Univerzális" vezérlőkártya V1<br>Tatra front</h3></td>
+							</tr>
+							<tr>
+								<td>A korszerűbb kivitelű, ún "Univerzális" vezérlőkártyának egyik alváltozata, amelyek a Tatra T5C5K villamosok homlokfali kijelzőjében dolgoztak. Később VMX protokollra lettek átalakítva. Ez a fajta panel a beépített vezérlő IC-s pixel mátrixokkal működik eggyütt.</td>
+								<td>FOK-GYEM gyári szám:</td>
+								<td>LNSV-BUS-CPU-PCB</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="row">
+										<div class="column">
+											<img src="data/Images/FGY_LNSV_BUS_CPU_PCB_C.jpg" 
+											alt="FGY LNSV BUS CPU PCB" class="small_image" style="width:100%">
+										</div>
+										<div class="column">
+											<img src="data/Images/FGY_LNSV_BUS_CPU_PCB_S.jpg" 
+											alt="FGY LNSV BUS CPU PCB" class="small_image" style="width:100%">
+										</div>
+									</div>
+								</td>
+								<td>
+									<p align="center">Ki-CAD 8.0 projekt</p><br>
+									<a href="data\projects\LNSV_BUS_CPU_PCB_universal\LNSV_BUS_CPU_PCB_universal.zip"> 
+										<img class="center" src="pictures/Kicad_logo.jpg" width='64'>
+									</a>
+								</td>
+								<td>Kapcsolási rajz (PNG)
+									<div class="column">
+											<img src="data/projects/LNSV_BUS_CPU_PCB_universal/LNSV_BUS_CPU_PCB_universal.png" alt="mux pcb" class="small_image" style="width:100%">
+									</div>
+								</td>
+							</tr>
+						<tr height="20"<td colspan="3"></td></tr>
+							<tr>
+								<td colspan="3"><h3 id="table_header" align="center">"Univerzális" vezérlőkártya V2</h3></td>
+							</tr>
+							<tr>
+									<td>412 front, kiírókártyás megoldásokhoz</td>
+									<td>Ki-CAD projektfile</td>
+									<td>Kapcsolási rajz (PNG)</td>
+							</tr>
+						<tr height="20"<td colspan="3"></td></tr>
+							<tr>
+								<td colspan="3"><h3 id="table_header" align="center">"Univerzális" vezérlőkártya V3</h3></td>
+							</tr>
+							<tr>
+									<td>Belső kijelzőkhöz</td>
+									<td>Ki-CAD projektfile</td>
+									<td>Kapcsolási rajz (PNG)</td>
+							</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</body>
+</html>

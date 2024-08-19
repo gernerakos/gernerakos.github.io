@@ -1,3 +1,222 @@
+<<<<<<< HEAD
+
+:root {
+    --bg-color:#01161E;
+
+	--menu-color:#598392;
+	--font-color: #F4FAFF;
+}
+
+body {   					/* általános formázás minden html oldalra */
+	margin: 25px;								/* margó, betűk típusa, mérete és színének beállítása */
+	background-color: var(--bg-color);
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+	color: #F4FAFF;
+	background-image: url("pictures/bg.jpg");   /* háttérkép*/
+	}
+
+
+
+h1 {
+	
+	background-color: var(--bg-color);					/* a címsorok beállítása minden oldalon*/
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #F4FAFF;
+	border: solid;
+	}
+	
+table{
+	border: solid;
+	padding-top: 100px;
+    /*margin: 10px;*/
+    padding: 10px;
+    background-color: var(--bg-color);
+}
+
+
+/* ----------------- ID ----------------- */ 
+#main_table{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+	background-color: var(--bg-color);
+}
+
+#table_header{
+	margin: 4px;
+	background-color: #124559;
+}
+
+#small_image{
+	max-width: 100px;
+}
+#general_table{
+	margin-left: 30px;
+	margin-right: 30px;
+	border-color: var(--font-color);
+	border-width: 2px;
+	border-style: solid;
+}
+	
+
+#schematics{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+	background-color: var(--bg-color);
+	
+	
+	
+	
+}
+
+#menu{
+	padding: 20px;
+	line-height: 2;
+	vertical-align: top;
+	Height: 250px;
+	width: 210px;
+	border: solid;
+	background-color: var(--menu-color);
+}
+
+#right_menu{
+	width: 200px;
+}
+
+
+#dynamic_content{
+	vertical-align: top;
+	width: 800px;
+}
+
+#database_result{
+	width: 800px;
+	height: fit-content;
+	line-height: 25px;
+	padding: 10px;
+}
+
+#general_button{
+	background-color: #ddd744;
+}
+
+#reset_button{
+	background-color: #b92d2d;
+}
+
+#login_redirect{
+	color: #ddd744;
+}
+
+#session_box{
+	background-color: #b92d2d;
+	color: #ddd744;
+	vertical-align: top;
+	padding: 10px;
+	padding-top: 10px;
+	line-height: 1.5;
+}
+
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.database_result_row:hover {
+	border: solid;
+	border-color: #ddd744;
+	border-width: 1px;
+
+	color: #303030;
+	background-color: #e4d49e;
+	
+	
+}
+
+.sidenav a:any-link{
+	background-color: #var(--menu-color);
+	color: #ffffff;
+}
+
+.sidenav a:visited {
+  background-color: #var(--menu-color);
+  color: #ffffff;
+}
+
+.sidenav a.active {
+  background-color: #var(--menu-color);
+  color: #b92d2d;
+}
+
+.sidenav a:hover {
+  background-color: #var(--menu-color);
+  color: #ddd744;
+}
+
+.spread_out{
+	line-height: 2;
+	vertical-align: top;
+}
+
+
+
+.row {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  flex: 50%;
+  max-width: 200px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.small_image{
+	
+	min-width: 20px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
 
 :root {
     --bg-color:#01161E;
@@ -174,3 +393,4 @@ table{
 
 
 
+>>>>>>> b587ea0a1810e1bcca6f720c3a9d89747d8a55f9
